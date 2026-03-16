@@ -40,3 +40,10 @@ print(f'percentage -> {wine_of_US_percentage}')
 
 print()
 print(wine_reviews.loc[wine_reviews.country.isin(['Italy', 'Hungary'])])
+
+result_wine = wine_reviews.loc[(wine_reviews.country == 'Italy') | (wine_reviews.points >= 90)]
+print(result_wine)
+
+print()
+print()
+print(wine_reviews.describe())
