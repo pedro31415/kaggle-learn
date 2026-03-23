@@ -18,3 +18,9 @@ print(best_rating_per_price)
 # 3 exercise 
 price_extremes = reviews.groupby('variety').price.agg(['min', 'max'])
 print(price_extremes)
+
+# 4 exercise 
+sorted_varieties = reviews.groupby('variety').price.agg(['min', 'max'])
+
+print(sorted_varieties.sort_values(by=['min', 'max'], ascending=False))
+
